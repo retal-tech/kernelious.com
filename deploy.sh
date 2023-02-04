@@ -1,6 +1,7 @@
 git checkout dist&&
 git merge master&&
 ng build&&
-find . ! -name 'dist' -type f -exec rm -f {} +&&
+rm *.json node_modules src front
 mv dist/kernelious/* .
+rm dist
 
