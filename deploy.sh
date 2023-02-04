@@ -9,6 +9,5 @@ mv dist/kernelious/* . &&
 rm dist -rf
 git add -A
 git commit -m "Deploy"
-git push
-
+git push -f  origin dist
 
