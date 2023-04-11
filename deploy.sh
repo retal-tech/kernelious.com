@@ -1,4 +1,4 @@
-git branch -d dist&&
+git branch -D dist&&
 git branch dist&&
 git checkout dist&&
 git merge master&&
