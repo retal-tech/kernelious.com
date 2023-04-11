@@ -4,7 +4,7 @@ git checkout dist&&
 git merge master&&
 npm i && npm audit fix &&
 ng build&&
-rm *.json node_modules src front -rf &&
+rm *.json node_modules src front *.MD *.md -rf &&
 mv dist/kernelious/* . &&
 rm dist -rf
 git add -A
