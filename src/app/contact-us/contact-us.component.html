@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="breadcrumb__content p-relative z-index-1">
-                        <h3 class="breadcrumb__title">About Kernelious</h3>
+                        <h3 class="breadcrumb__title">ABOUT KERNELIOUS</h3>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="col-xl-6 col-lg-6 ">
                     <div class="tp-contct-wrapper contact-space-40">
                         <div class="tp-contact-thumb mb-60">
-                            <img src="assets/img/contact/contact-1.jpg" alt="">
+                            <img src="assets/img/contact/contact-3.png" alt="">
                         </div>
                         <div class="tp-contact-info mb-40">
                             <h4 class="contact-title">Mail Address</h4>
@@ -47,12 +47,12 @@
                     <div class="tpcontact">
                         <h4 class="tp-contact-big-title">Let’s Talk...</h4>
                         <div class="tpcontact__form tpcontact__form-3">
-                            <form id="contact-form" action="https://weblearnbd.net/tphtml/collax/collax/assets/mail.php">
-                                <input name="name" type="text" placeholder="Enter your Name">
-                                <input name="email" type="email" placeholder="Enter your Mail">
-                                <textarea name="message" placeholder="Enter your Message"></textarea>
+                            <form id="contact-form" >
+                                <input name="name"  [formControl]="name" type="text" placeholder="Enter your Name">
+                                <input name="email"  [formControl]="mail" type="email" placeholder="Enter your Mail">
+                                <textarea name="message"  [formControl]="message" placeholder="Enter your Message"></textarea>
                             </form>
-                            <button type="submit" class="tp-btn-yellow">Send Message</button>
+                            <button type="submit" [disabled]="clicked"  (click)="send_message(); clicked = true" class="tp-btn-yellow">{{btn}}</button>
                         </div>
                         <p class="ajax-response"></p>
                     </div>

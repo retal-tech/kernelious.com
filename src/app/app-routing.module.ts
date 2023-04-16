@@ -8,12 +8,20 @@ import {PortfolioDetailComponent} from "./portfolio-detail/portfolio-detail.comp
 import {ContactUsComponent} from "./contact-us/contact-us.component";
 import {AboutUsComponent} from "./about-us/about-us.component";
 import {LoginComponent} from "./login/login.component";
+import {ServiceDescriptionComponent} from "./service-description/service-description.component";
 
 const routes: Routes = [
   {path:"home", component: HomeComponent},
   {path:"portfolio", component: PortfolioComponent, children: [
       {path: "first", component: PortfolioDetailComponent}
     ]},
+  {path: 'service', component: ServiceDescriptionComponent, children:[
+      {
+        path: ':service_t',
+        component: ServiceDescriptionComponent
+      }
+    ]
+  },
   {path: "faq", component: FaqComponent},
   {path: "contact-us", component: ContactUsComponent},
   {path: "about-us", component: AboutUsComponent},
@@ -23,7 +31,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

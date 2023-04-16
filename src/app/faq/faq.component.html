@@ -11,15 +11,14 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="breadcrumb__content p-relative z-index-1">
-                        <h3 class="breadcrumb__title">Ask Question</h3>
-                        <a href="contact.html" class="tp-btn-white-border">Lets work together <i class="far fa-arrow-right"></i></a>
+                        <h3 class="breadcrumb__title">ASK QUESTIONS</h3>
+                        <a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" class="tp-btn-white-border">Lets work together <i class="far fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- breadcrumb area end -->
-
     <!-- accordion-area-start -->
     <div class="sd-accordio-area pt-130 pb-130">
         <div class="container">
@@ -27,102 +26,21 @@
                 <div class="col-xl-12">
                     <div class="tp-custom-accordio faq-accordio-border">
                         <div class="accordion" id="accordionExample">
+                            <ng-template  ngFor let-faq [ngForOf]="faqs" let-i="index">
                             <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Is my data safe?
+                                <h2 class="accordion-header" id="heading-{{i}}">
+                                    <button class="accordion-buttons" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse-{{i}}" aria-expanded="true" attr.aria-controls="collapse-{{i}}">
+                                        {{faq.name}}
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="collapse-{{i}}" class="accordion-collapse collapse " [ngClass]="{'show': i === 0}" attr.aria-labelledby="heading-{{i}}" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
+                                        {{faq.description}}
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How does the 30-day free software trial work?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        What happens after my free trial?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingfour">
-                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                                        What makes LessAccounting better than the rest?
-                                    </button>
-                                </h2>
-                                <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingfive">
-                                    <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
-                                        Is my data safe?
-                                    </button>
-                                </h2>
-                                <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingsix">
-                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-                                        How does the 30-day free software trial work?
-                                    </button>
-                                </h2>
-                                <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingseven">
-                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-                                        What happens after my free trial?
-                                    </button>
-                                </h2>
-                                <div id="collapseseven" class="accordion-collapse collapse" aria-labelledby="headingseven" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-items">
-                                <h2 class="accordion-header" id="headingeight">
-                                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseight" aria-expanded="false" aria-controls="collapseight">
-                                        What makes LessAccounting better than the rest?
-                                    </button>
-                                </h2>
-                                <div id="collapseight" class="accordion-collapse collapse" aria-labelledby="headingeight" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        A dedicated product design team can help you achieve your business goals. Whether you need to craft an idea for a completely new product or elevate the quality of an existing solution, we’ll help you to create a product that is laser targeted to your users’ needs and delivers business results.
-                                    </div>
-                                </div>
-                            </div>
+                            </ng-template>
+
                         </div>
                     </div>
                 </div>

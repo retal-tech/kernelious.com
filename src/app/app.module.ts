@@ -14,6 +14,9 @@ import { FaqComponent } from './faq/faq.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
+import { ServiceDescriptionComponent } from './service-description/service-description.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,13 @@ import { LoginComponent } from './login/login.component';
     NotFoundComponent,
     ContactUsComponent,
     LoginComponent,
+    ServiceDescriptionComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
