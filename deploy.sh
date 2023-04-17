@@ -7,6 +7,7 @@ ng build&&
 rm *.json node_modules src front *.MD *.md -rf &&
 mv dist/kernelious/* . &&
 rm dist -rf
+rm README.md
 git add -A
 git commit -m "Deploy"
 git push -f  origin dist
