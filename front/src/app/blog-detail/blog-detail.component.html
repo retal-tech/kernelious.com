@@ -1,0 +1,99 @@
+<main>
+
+    <!-- breadcrumb area start -->
+    <section class="breadcrumb__area  breadcrumb__pt-310 include-bg p-relative"
+             data-background="assets/img/breadcrum/ab-1.1.jpg">
+        <div class="ac-about-shape-img z-index-1">
+            <img src="assets/img/breadcrum/ab-shape-1.1.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="breadcrumb__content p-relative z-index-1">
+                        <h3 class="breadcrumb__title">{{blog.title}}</h3>
+                        <a  routerLink="/contact-us" routerLinkActive="active" class="tp-btn-white-border">Lets work together <i class="far fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
+
+
+    <!-- postbox area start -->
+    <div class="postbox__area pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-8 col-xl-8 col-lg-8 col-12">
+                    <div class="postbox__wrapper">
+                        <article class="postbox__item format-image transition-3">
+                            <div class="postbox__content">
+                                <p><img class="w-100" src="{{src_pre}}{{blog.image}}" alt=""></p>
+                                <div class="postbox__meta">
+                                    <span><a href="#"><i class="fal fa-user-circle"></i> {{blog.author_name}} </a></span>
+                                    <span><a href="#"><i class="fal fa-clock"></i> {{blog.publish_date}}</a></span>
+                                </div>
+                                <h3 class="postbox__title">
+                                    {{blog.title}}
+                                </h3>
+                                <div class="postbox__text" [innerHTML]="blog.body">
+                                </div>
+
+                                <div class="postbox__social-wrapper">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-12">
+                                            <div class="postbox__tag tagcloud">
+                                                <span>Tag</span>
+                                                <ng-template ngFor let-tag [ngForOf]="blog.tags" >
+                                                <a >{{tag.name}}</a>
+                                                </ng-template>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-12">
+                                            <div class="postbox__social text-xl-end text-start">
+                                                <span>Share</span>
+                                                <a href="#"><i class="fab fa-linkedin tp-linkedin"></i></a>
+                                                <a href="#"><i class="fab fa-pinterest tp-pinterest"></i></a>
+                                                <a href="#"><i class="fab fa-facebook tp-facebook" ></i></a>
+                                                <a href="#"><i class="fab fa-twitter tp-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-4">
+                    <div class="sidebar__wrapper">
+
+                        <div class="sidebar__widget mb-40">
+                            <h3 class="sidebar__widget-title">Recent Post</h3>
+                            <div class="sidebar__widget-content">
+                                <div class="sidebar__post rc__post">
+                                    <ng-template ngFor let-blog [ngForOf]="recent_blog.results" >
+                                    <div class="rc__post mb-20 d-flex align-items-center">
+                                        <div class="rc__post-thumb mr-20">
+                                            <a routerLink="/blog/{{blog.slug}}" routerLinkActive="active"><img src="{{blog.image}}"></a>
+                                        </div>
+                                        <div class="rc__post-content">
+                                            <div class="rc__meta">
+                                                <span>{{blog.publish_date}}</span>
+                                            </div>
+                                            <h3 class="rc__post-title">
+                                                <a routerLink="/blog/{{blog.slug}}" routerLinkActive="active">{{blog.title}}</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- postbox area end -->
+
+</main>

@@ -1,0 +1,74 @@
+
+<main>
+
+    <!-- breadcrumb area start -->
+    <section class="breadcrumb__area  breadcrumb__pt-310 include-bg p-relative"
+             data-background="assets/img/breadcrum/ab-1.1.jpg">
+        <div class="ac-about-shape-img z-index-1">
+            <img src="assets/img/breadcrum/ab-shape-1.1.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="breadcrumb__content p-relative z-index-1">
+                        <h3 class="breadcrumb__title">ASK QUESTIONS</h3>
+                        <a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page" class="tp-btn-white-border">Lets work together <i class="far fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb area end -->
+    <!-- accordion-area-start -->
+    <div class="sd-accordio-area pt-130 pb-130">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="tp-custom-accordio faq-accordio-border">
+                        <div class="accordion" id="accordionExample">
+                            <ng-template  ngFor let-faq [ngForOf]="faqs" let-i="index">
+                            <div class="accordion-items">
+                                <h2 class="accordion-header" id="heading-{{i}}">
+                                    <button class="accordion-buttons" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse-{{i}}" aria-expanded="true" attr.aria-controls="collapse-{{i}}">
+                                        {{faq.name}}
+                                    </button>
+                                </h2>
+                                <div id="collapse-{{i}}" class="accordion-collapse collapse " [ngClass]="{'show': i === 0}" attr.aria-labelledby="heading-{{i}}" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        {{faq.description}}
+                                    </div>
+                                </div>
+                            </div>
+                            </ng-template>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- accordion-area-end -->
+
+    <!-- news-area-start -->
+    <div class="tp-news-letter-area tp-news-letter-bg pt-200 pb-150" data-background="assets/img/news/news-bg.jpg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-8 col-md-12 ">
+                    <div class="tp-news-sub-wrapper text-center">
+                        <div class="tp-news-letter-section-box">
+                            <h2 class="tp-title-sm tp-title-sm tp-white-text pb-30">Launch your product with us</h2>
+                            <p class="text-white pb-35">We had the pleasure of being a partner for companies from markets
+                                like Fintech, Health, Government, Security, Big Data & many more.</p>
+                        </div>
+                        <div class="tp-news-button">
+                            <a class="tp-btn-lg-yellow" href="#">Become a Partner</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- news-area-end -->
+
+</main>
