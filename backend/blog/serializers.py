@@ -11,6 +11,7 @@ class TagSerializer(serializers.HyperlinkedModelSerializer):
 class PostSerializer(serializers.HyperlinkedModelSerializer):
     author_name = serializers.CharField(source='author.user.first_name')
     tags = TagSerializer(read_only=True, many=True)
+    image = serializers.CharField(source='image.src')
 
     class Meta:
         model = Post
