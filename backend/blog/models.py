@@ -44,4 +44,4 @@ class Post(models.Model):
 
     @property
     def src(self):
-        return self.image.path
+        return self.image.url
