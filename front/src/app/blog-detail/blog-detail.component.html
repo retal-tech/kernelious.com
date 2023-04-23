@@ -74,7 +74,7 @@
                                     <ng-template ngFor let-blog [ngForOf]="recent_blog.results" >
                                     <div class="rc__post mb-20 d-flex align-items-center">
                                         <div class="rc__post-thumb mr-20">
-                                            <a routerLink="/blog/{{blog.slug}}" routerLinkActive="active"><img src="{{blog.image}}"></a>
+                                            <a routerLink="/blog/{{blog.slug}}" routerLinkActive="active"><img src="{{src_pre}}{{blog.image}}"></a>
                                         </div>
                                         <div class="rc__post-content">
                                             <div class="rc__meta">
