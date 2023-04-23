@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'blog',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
