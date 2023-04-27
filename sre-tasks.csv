@@ -1,0 +1,44 @@
+
+
+Task, time, description 
+Add neuron metrics, 5h, add neuron metrics to stage and production. Assistance to create their dashboard and validate it. Import dashboard to production and add production metrics 
+
+Uptime API for data team,10h, i had a meeting with bahram and he needs an api to have uptime for his report. i added the api to status page system and connected to grafana http uptime 
+
+Check timeout problem with sotoon, 3h, we had timeout problem at sotoon i wrote a repot about what we experienced and our prober logs
+
+Create a list of endpoints with DNS export and add them to monitoring, 5h, Ramin exported all subdomains we had from dns. We validate them and i added to our blackbox
+
+Write SRE and SRE lead job description, 3h, we need to hire for sre team. So I wrote job description for SRE and SRE Lead from other company and our company idea
+
+Maintenance time teams and mail tech and product for maintenance time, 1.5 h, we need to know our services maintenance time to measure uptime so I created a channel and added tech and product also I mailed tech and product and asked them for their feedback 
+
+Create a system for monitoring backup, 5h, ramin asked me to create a system that can monitor our backups. I crea at ad wrote its document 
+
+Deploy backupguardin in slave 1 mysql,  3h, Alireza wanted to monitor his backups so I deployed backup guardian in mysql slave 1
+
+Deploy cachet and create an agent for authentication incident and maintenance creation,17h, we needed to have status page for measuring the uptime and publicly announce our incidents so I deployed a cachet and wrote an agent which queries all of our prometheus and creates an incident if needs
+
+Add metrics and implement endpoints to cachet, 3h, we have some important endpoint, export them and added them to cachet agent configuration 
+
+Clean prometheus kuber scrap config, 1h, our service prometheus is a large file reformat and add comments 
+
+Catalogue team alert, 2h, Ali fazeli need to have alerts to his metrics add his alert and create catalogue team chanenell and contact point
+
+Create alert for harly requested per city, 2h, navid asks me to create alerts for harly request box i created the alerts and created their contact points 
+
+Add db index length metrics to sirhiss project, 3h, Alireza asked me to add db index count metrics to measure it’s annormaly i added and created it’s alerts 
+
+Add cadvisor for sentry and create it’s dashboard, 2h, Armin added cadvisor to sentry and I created it’s dashboard and it’s alerts 
+
+Add PVC metrics’s to sirhiss, 2h, we needed to know our PVC anormally do i added the metrics to the sirhiss and added its alerts
+
+Fix data team alerts and dashboards, 2h, i had a talk with bahram and they need to remove and add some of their alerts and i did it for them
+
+Add palladium metrics and dashboards to production alerts, 4h, palladium team needs to handle their metrics I helped them to create their dashboards and add their metrics to production and stage monitoring 
+
+Grafana reset password flow implementation, 1h, SRE team is handling lots of tasks for grafana reset password. implemented the reset password flow
+
+Netnegar pricing, 2h, our netnegar service subscription is end and we need to subscribe the new subscription plan
+
+CRM and PO metrics and dashboards, 6h, abbas hassani developed new services and and we I created their dashboards and added their metrics
